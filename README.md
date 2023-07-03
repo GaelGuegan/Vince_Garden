@@ -19,3 +19,7 @@ The user should be able to change these different parameter through a user inter
 
 The software will use **python** with **Qt** framework (to avoid cross compilation). It will have access to the GPIO to activated the different relays, according to the programed timing set.
 
+```
+pip3 install pyside6
+```
+
