@@ -17,7 +17,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBoxVanne">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -153,9 +153,9 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../res/stop.jpg</normaloff>
-         <normalon>../res/start.jpg</normalon>../res/stop.jpg</iconset>
+        <iconset resource="../res/rc_resource.qrc">
+         <normaloff>:/icons/start.jpg</normaloff>
+         <normalon>:/icons/stop.jpg</normalon>:/icons/start.jpg</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -193,58 +193,6 @@
      <property name="title">
       <string>Planning</string>
      </property>
-     <widget class="QSplitter" name="splitter">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>40</y>
-        <width>361</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Tous les</string>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="spinBoxPlannigDays">
-       <property name="value">
-        <number>2</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>jours à </string>
-       </property>
-      </widget>
-      <widget class="QTimeEdit" name="timeEditPlanningTime">
-       <property name="dateTime">
-        <datetime>
-         <hour>16</hour>
-         <minute>30</minute>
-         <second>0</second>
-         <year>2000</year>
-         <month>1</month>
-         <day>1</day>
-        </datetime>
-       </property>
-       <property name="time">
-        <time>
-         <hour>16</hour>
-         <minute>30</minute>
-         <second>0</second>
-        </time>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>heures.</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QSplitter" name="splitter_2">
       <property name="geometry">
        <rect>
@@ -262,17 +210,124 @@
         <string>Quantité:</string>
        </property>
       </widget>
-      <widget class="QSpinBox" name="spinBox_2"/>
+      <widget class="QSpinBox" name="spinBoxQuantity"/>
       <widget class="QLabel" name="labelQuantityUnits">
        <property name="text">
         <string>cL.</string>
        </property>
       </widget>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>371</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Tous les</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxDays">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Lundi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mardi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mercredi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jeudi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Vendredi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Samedi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Dimanche</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>jours à </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="timeEditPlanningTime">
+         <property name="dateTime">
+          <datetime>
+           <hour>16</hour>
+           <minute>30</minute>
+           <second>0</second>
+           <year>2000</year>
+           <month>1</month>
+           <day>1</day>
+          </datetime>
+         </property>
+         <property name="time">
+          <time>
+           <hour>16</hour>
+           <minute>30</minute>
+           <second>0</second>
+          </time>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>heures.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../res/rc_resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

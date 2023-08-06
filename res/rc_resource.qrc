@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="icons">
+    <file alias="start.jpg">start.jpg</file>
+    <file alias="stop.jpg">stop.jpg</file>
+</qresource>
+</RCC>
